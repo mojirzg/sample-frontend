@@ -58,14 +58,19 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <form ref={ref} onSubmit={handleSubmit}>
-        <input name="name" placeholder="name" />
-        <input name="age" placeholder="age" />
-        <input name="address" placeholder="address" />
-        <select name="gender">
-          <option>male</option>
-          <option>female</option>
-        </select>
-
+        <div className={styles.formData}>
+          <label htmlFor="name">Name:</label>
+          <input name="name" placeholder="name" />
+          <label htmlFor="age">Age:</label>
+          <input name="age" placeholder="age" />
+          <label htmlFor="address">Address:</label>
+          <input name="address" placeholder="address" />
+          <label htmlFor="gender">Gender:</label>
+          <select name="gender">
+            <option>male</option>
+            <option>female</option>
+          </select>
+        </div>
         <button type="submit">Submit</button>
       </form>
       <div className={styles.users}>
